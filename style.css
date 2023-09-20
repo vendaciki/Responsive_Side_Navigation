@@ -1,0 +1,92 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: left; /* Změna textového zarovnání na levou stranu */
+    cursor: pointer;
+    white-space: nowrap;
+    width: 100%;
+    font: inherit;
+}
+
+nav {
+    height: 100%;
+    width: 250px;
+    background-color: #edf1f2;
+    position: fixed !important;
+    z-index: 1;
+    left: 0; /* Změna na levou stranu */
+    top: 0;
+    display: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.main {
+    margin-left: 260px; /* pro zobrazení obsahu vedle bočního panelu */
+}
+
+.bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+    text-decoration: none;
+}
+
+.bar-item:hover {
+    color: rgb(58, 57, 57);
+    background-color: white;
+}
+
+.large {
+    font-size: 24px !important;
+}
+
+
+
+
+@media (min-width: 993px) {
+    .large {
+        display: none !important;
+    }
+
+    nav {
+        display: block !important;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
